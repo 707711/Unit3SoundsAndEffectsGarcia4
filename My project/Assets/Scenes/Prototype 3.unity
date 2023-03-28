@@ -615,6 +615,7 @@ MonoBehaviour:
   isOnground: 1
   gameOver: 0
   explosionParticle: {fileID: 1244150302}
+  dirtParticle: {fileID: 1438565936, guid: fb82dfb8d1c7044c69afd2486befecb3, type: 3}
 --- !u!65 &1878460396
 BoxCollider:
   m_ObjectHideFlags: 0

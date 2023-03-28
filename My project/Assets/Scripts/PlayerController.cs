@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private Animator playerAnim;
 
     public ParticleSystem explosionParticle;
+    public ParticleSystem dirtParticle;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +49,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Game Over!");
             playerAnim.SetBool("Death_b", true);
             playerAnim.SetInteger("DeathType_int", 1);
+            explosionParticle.Play();
             explosionParticle.Play();
         }
     }
