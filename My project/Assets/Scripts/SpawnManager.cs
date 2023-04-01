@@ -12,6 +12,8 @@ public class SpawnManager : MonoBehaviour
 
     private PlayerController playerControllerScript;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,8 @@ public class SpawnManager : MonoBehaviour
         if (playerControllerScript.gameOver == false)
         {
             Instantiate(obstaclePrefab, spawnPos, obstaclePrefab.transform.rotation);
+
+            Vector3 SpawnManager = spawnPos;
         }
     }
 
