@@ -42,6 +42,15 @@ public class PlayerController : MonoBehaviour
             dirtParticle.Stop();
             playerAudio.PlayOneShot(jumpSound, 1.0f);
         }
+
+        else if(Input.GetKeyDown(KeyCode.Space) && !gameOver)
+        {
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isOnground = false;
+            playerAnim.SetTrigger("Jump_trig");
+            dirtParticle.Stop();
+            playerAudio.PlayOneShot(jumpSound, 1.0f);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveLeft : MonoBehaviour
 {
     private float speed = 28;
+    private float dash = 35.0f;
     private PlayerController playerControllerScript;
 
     private float leftBound = -15;
@@ -22,6 +23,11 @@ public class MoveLeft : MonoBehaviour
         if (playerControllerScript.gameOver == false)
         {
             transform.Translate(Vector3.left * Time.deltaTime * speed);
+        }
+
+        else if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            transform.Translate(Vector3.left * Time.deltaTime * dash);
         }
 
         if (transform.position.x < leftBound && gameObject.CompareTag("Obstacle"))
